@@ -1,0 +1,206 @@
+/* Global Style */
+:root{
+    --main-color: #0078ff;
+    --second-color: #0077ffad;
+    --border-second-color:#0077ff44;
+    --bottom-box-shadow: 0 10px 10px -10px #c9c9c9;
+
+}
+/* Scroll Style */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--second-color);
+}
+/* Scroll Style */
+*{
+    transition: all .3s;
+}
+body{
+    background-color: #f5f5f5;
+}
+.main-color{
+    color: var(--main-color);
+}
+.bottom-box-shadow{
+    box-shadow: var(--bottom-box-shadow);
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    color: #686868;
+}
+h3{
+    width: fit-content;
+}
+h3::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+/* Start Scroll Up */
+.scroll-up{
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+/* End Scroll Up */
+
+/* Start Navbar Section */
+nav{
+    background-color: transparent;
+}
+nav .logo{
+    font-weight: 600;
+    font-size: 30px;
+}
+nav .menu-bar{
+    font-size: 25px;
+}
+nav .nav-item a{
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+@media (max-width:992px) {
+    nav .nav-item a{
+        text-align: center;
+    }
+}
+nav .navbar-nav > .nav-item a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: all .5s;
+}
+@media (max-width:992px) {
+    nav .navbar-nav > .nav-item a::before{
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 0;
+    }
+}
+nav .navbar-nav .nav-item > a:hover:before, nav .navbar-nav .active > a::before{
+    width: 70%;
+}
+@media (max-width:992px) {
+    nav .navbar-nav .nav-item > a:hover:before, nav .navbar-nav .active > a::before{
+        width: 30%;
+    }
+}
+nav .navbar-nav .active a{
+    color: var(--main-color) !important;
+}
+nav .select-span{
+    font-weight: 600;
+    font-size: 14px;
+}
+nav .select-menu li:hover .dropdown-item,nav .select-menu li:hover .dropdown-item i{
+    color: var(--main-color);
+}
+nav .dropdown .select-menu li > a{
+    color: #000 !important;
+}
+nav .dropdown .select-menu li:hover > a{
+    color: var(--main-color) !important;
+}
+nav .select-menu .list-parent{
+    position: relative;
+}
+nav .select-menu .list-parent .other-dropdown{
+    position: absolute;
+    left: -85%;
+    top: 22%;
+    opacity: 0;
+}
+nav .select-menu .list-parent:hover .other-dropdown{
+    left: -100%;
+    opacity: 1;
+}
+
+nav .select-menu .list-parent .other-dropdown li a:hover{
+    color: var(--main-color);
+}
+/* End Navbar Section */
+
+/* Start Home Section */
+#home{
+    background-image: linear-gradient(to right, var(--second-color), var(--second-color)), url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#home .container{
+    height: 60vh;
+}
+#home .container .home-content h1{
+    font-size: 55px;
+}
+#home .container .home-content nav ol li::before{
+    color: #cde1f8;
+}
+/* End Home Section */
+.blog-info .information .parg-blog q{
+    font-style: italic;
+}
+.blog-info .comment-blog span {
+    font-style: italic;
+}
+.blog-info .contact-blog form textarea{
+    height: 200px;
+}
+.blog-info .contact-blog form button{
+    width: fit-content;
+    outline: 3px solid transparent;
+    transition: all .5s;
+}
+.blog-info .contact-blog form button:hover{
+    outline-color: #a8d1ff;
+    background-color: #0077ffcc;
+}
+.blog-info h5{
+    line-height: 15px;
+}
+.blog-info li::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 10px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+@media (max-width:992px) {
+    .blog-info h5{
+        font-size: 20px !important;
+    }
+}
+@media (max-width:575px) {
+    .search, .resent, .archive, .tags{
+        padding: 24px !important;
+    }
+}
+/* Start Section */
